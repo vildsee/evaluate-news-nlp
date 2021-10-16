@@ -20,10 +20,10 @@ app.get('/', function (req, res) {
     res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
-const port = 7070;
+const port = 8080;
 // designates what port the app will listen to for incoming requests
-const server = app.listen(7071, function () {
-    console.log('Example app listening on port 7070!')
+const server = app.listen(8081, function () {
+    console.log('Example app listening on port 8080!')
 })
 
 app.get('/test', function (req, res) {
