@@ -47,9 +47,9 @@ app.post('/meaningCloud', async function (req, res) {
     const response = await fetch(apiURL)
     try {
         const data = await response.json()
-        data = req.body
+        // data = req.body
         console.log(data)
-        res.send(appData)
+        res.send(data)
     }   catch(error) {
         console.log('server POST error')
     }

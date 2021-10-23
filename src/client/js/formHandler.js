@@ -39,7 +39,7 @@ const updateUI = async () => {
     } catch (error) {
         console.log('UI error')
     }
-};
+}
 export { handleSubmit }
 //     if(Client.checkForName(formUrl)) {
 //         fetch('http://localhost:8081/meaningCloud', {
