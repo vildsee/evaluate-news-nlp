@@ -41,30 +41,3 @@ const updateUI = async () => {
     }
 }
 export { handleSubmit }
-//     if(Client.checkForName(formUrl)) {
-//         fetch('http://localhost:8081/meaningCloud', {
-//             method: 'POST',
-//             credentials: 'same-origin',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify(data),
-//         })
-//             .then(res => res.json())
-//             .then(function (res) {
-//                 document.getElementById('model').innerHTML = 'Model: ' + res.model;
-//                 document.getElementById('score').innerHTML = 'Score: ' + res.score_tag;
-//                 document.getElementById('subjectivity').innerHTML = 'Subjectivity: ' + res.subjectivity;
-//                 document.getElementById('confidence').innerHTML = 'Confidence: ' + res.confidence;
-//                 document.getElementById('irony').innerHTML = 'Irony: ' + res.irony;
-//                 document.getElementById('agreement').innerHTML = 'Agreement: ' + res.agreement;
-//             })
-//     }   else {
-//         alert ('Incorrect address, please enter a valid URL!')
-//     }
-
-    
-// }
-
-
-
