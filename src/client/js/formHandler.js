@@ -28,7 +28,7 @@ function handleSubmit(event) {
 const updateUI = async () => {
     const req = await fetch('/meaningCloud');
     try {
-        const allData = await req.json();
+        const res = await req.json();
 
         document.getElementById('model').innerHTML = 'Model: ' + res.model;
         document.getElementById('score').innerHTML = 'Score: ' + res.score_tag;

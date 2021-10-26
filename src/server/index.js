@@ -18,8 +18,6 @@ app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json())
 
 const cors = require('cors')
-const { runInNewContext } = require('vm')
-const { handleSubmit } = require('../client/js/formHandler.js')
 app.use(cors())
 
 app.get('/', function (req, res) {
@@ -38,7 +36,7 @@ app.get('/test', function (req, res) {
 })
 
 //API requests
-const appData = {}
+let appData = {}
 
 //Request to meaningCloud API
 app.post('/meaningCloud', async function (req, res) {
@@ -47,8 +45,9 @@ app.post('/meaningCloud', async function (req, res) {
     const response = await fetch(apiURL)
     try {
         const data = await response.json()
-        // data = req.body
+        
         console.log(data)
+        appData = data;
         res.send(data)
     }   catch(error) {
         console.log('server POST error')
