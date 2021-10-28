@@ -2,17 +2,20 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,500;1,200;1,300;1,500&display=swap" rel="stylesheet">
+        <title>Evaluate news article</title>
     </head>
 
     <body>
 
         <header>
-            <div class="">
-                Logo
+            <div class="logo">
+                <img src = "../images/le-logo.png" alt="LE logo">
             </div>
-            <div class="">
-                navigation
+            <div class="heading">
+                <h1>Language Evaluator</h1>
             </div>
         </header>
 
@@ -20,25 +23,21 @@
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
                     <input id="url" type="text" name="input" value="" placeholder="Enter url:">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <input id="submit" type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
             <section>
-                <strong>Form Results:</strong>
-                <div id="results">
-                    <div id="model"></div>
-                    <div id="score"></div>
-                    <div id="subjectivity"></div>
-                    <div id="confidence"></div>
-                    <div id="irony"></div>
-                    <div id="agreement"></div>
-                </div>
+                <div id="resultTable"></div>
             </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <hr>
+            <div id="footsie">
+                <p>Web API from: <a href url ="https://www.meaningcloud.com">MeaningCloud</a></p>
+                <p>Created by Vildsee ♡</p>
+            </div>
         </footer>
 
     </body>

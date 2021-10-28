@@ -22,6 +22,21 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(png|jpe?g|gif|ico)$/i,
+                use: [
+                  {
+                    loader: 'file-loader?name=[name].[ext]',
+                    options: {
+                        esModule: false,
+                      },
+                  },
+                ],
+            },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
             }
         ]
     },
@@ -31,7 +46,7 @@ module.exports = {
     plugins: [
         new HtmlWebPackPlugin({
             template: "./src/client/views/index.html",
-            filename: "./index.html",
+            filename: "./index.html"
         }),
         new MiniCssExtractPlugin({ filename: "[name].css" })
     ]

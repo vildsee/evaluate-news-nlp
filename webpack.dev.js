@@ -8,6 +8,11 @@ module.exports = {
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',
+    devServer: {
+        contentBase: './src/client/views',
+        watchContentBase: true,
+        port: 8080
+    },
     output: {
         libraryTarget: 'var',
         library: 'Client'
@@ -22,13 +27,28 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [ 'style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                  {
+                    loader: 'file-loader?name=[name].[ext]',
+                    options: {
+                        esModule: false,
+                      },
+                  },
+                ],
+            },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
             }
         ]
     },
     plugins: [
         new HtmlWebPackPlugin({
             template: "./src/client/views/index.html",
-            filename: "./index.html",
+            filename: "./index.html"
         }),
         new CleanWebpackPlugin({
             // Simulate the removal of files

@@ -59,20 +59,3 @@ app.get('/meaningCloud', function (req, res) {
     res.send(appData)
     console.log('app get')
 })
-
-//POST
-// app.post('/', (req, res) => {
-//     let newEntry = {
-//         model: req.body.model,
-//         score_tag: req.body.score_tag,
-//         subjectivity: req.aborted.subjectivity,
-//         confidence: req.body.confidence,
-//         irony: req.body.irony,
-//         agreement: req.body.agreement
-//     }
-//     appData=newEntry
-//     res.send(appData)
-// })
-
-
-
