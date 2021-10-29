@@ -41,14 +41,16 @@ table {
     background-color: #e0fbfc;
 }
 
-#resultTable th,
-#resultTable td {
+th,
+td {
     padding: 13px;
     text-align: center;
 }
 
-#resultTable tr:hover {background-color: #5c6b73;}
-#resultTable tr:hover {color: #e0fbfc;}
+#resultTable tr:hover {
+    background-color: #5c6b73;
+    color: #e0fbfc;
+}
 
 #formResults {
     font-size: 22px;

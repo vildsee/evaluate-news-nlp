@@ -16,6 +16,8 @@ This project makes it easy for the client to analyze their news article via Mean
 - Irony
 - Agreement
 
+Also used Jest for testing.
+
 ## Makers
 
 Template by Udacity, edited by Kadriliis
